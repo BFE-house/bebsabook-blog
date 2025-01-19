@@ -1,0 +1,22 @@
+{% extends "base/site-base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{- data.get_url('template-assets/css/tutorial-style.css') }} ">
+    <link rel="stylesheet" href="{{- data.get_url('template-assets/code-highlight/styles/default.min.css') }} ">
+{% endblock %}
+
+{% block site_base_content %}
+    <div class="container-fluid bd-layout">
+        {% include 'include/left-nav.html' %}
+        <main>
+            {% include 'include/breadcrumb.html' %}
+            {% block tutorial_base_content %}{% endblock %}
+        </main>
+    </div>
+{% endblock %}
+
+{% block maing_script_block %}
+    <script src="{{- data.get_url('template-assets/code-highlight/highlight.min.js') }}"></script>
+    <script src="{{- data.get_url('template-assets/code-highlight/clipboard.min.js') }}"></script>
+    <script src="{{- data.get_url('template-assets/code-highlight/init-code-highlight.js') }}"></script>
+{% endblock %}

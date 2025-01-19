@@ -1,0 +1,31 @@
+<div class="py-3 d-flex align-items-center justify-content-between">
+    <div class="previous">
+        {%- if data.prevPage %}
+            <a href="{{- data.get_url(data.prevPage.url) }}" class="pf-btn-primary btn d-flex align-items-center max-w-priview">
+                <div class="fa-2xl fa-sm-xl">
+                    <i class="fas fa-angle-left "></i>
+                </div>
+                <div class="ms-1 ms-md-3 text-start">
+                    <p class="mb-0 fa6">Previous</p>
+                    <h6 class="sm-d-none">{{- data.prevPage.name }}</h6>
+                </div>
+            </a>
+        {%- endif %}
+    </div>
+
+
+    <div class="next">
+        {%- if data.nextPage %}
+            <a href="{{- data.get_url(data.nextPage.url) }}" class="pf-btn-primary btn d-flex align-items-center max-w-priview">
+                <div class="me-1 me-md-3 text-end">
+                    <p class="mb-0 fa6">Next</p>
+                    <h6 class="sm-d-none">{{- data.nextPage.name }}</h6>
+                </div>
+                <div class="fa-2xl fa-sm-xl">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </a>
+        {%- endif %}
+    </div>
+
+</div>

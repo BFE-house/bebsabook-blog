@@ -1,0 +1,18 @@
+relativeUrl: bismillah
+lesson:
+  - name: In House Development
+    url: pweb
+    topics:
+      - name: PWeb
+        url: 'pweb'
+        photo: /template-assets/img/default-image.png
+      - name: SohozWeb
+        url: 'sohoz-web'
+        photo: /template-assets/img/default-image.png
+video:
+  title: Video Tutorial
+  url: '#'
+  topics:
+    - name: Basic Coding
+      url: '#'
+      photo: /template-assets/img/video-default.png

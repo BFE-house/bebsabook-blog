@@ -1,0 +1,33 @@
+<div class="d-grid gap-3">
+
+    {% for lesson in data.pageData.lesson %}
+        <div class="mb-4">
+            <h2 class="mb-0  text-h2">
+                <a href="{{- data.get_url(lesson.url) }}" class="link-transparent"> {{- lesson.name }} </a>
+            </h2>
+            <hr class="mb-3"/>
+            <div class="row g-3 row-cols-1 row-cols-md-2 row-cols-xxl-4">
+                {% for topic in lesson.topics %}
+                    <div class="col">
+                        <a href="{{- data.get_url(topic.url) }}" class="card shadow-sm poly-card h-100">
+                            <div class=" d-flex flex-row overflow-hidden">
+                                <img src="{{ topic.photo if data.get_url(topic.photo) else data.get_url('template-assets/img/default-image-500x500.png') }}"
+                                     alt="{{- topic.name }}"
+                                     class="card-img-top small-card-img"
+                                />
+                                <div class="d-flex align-items-center topic-name">
+                                    <P class="mb-0 title-text">{{- topic.name }}</P>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="d-flex  justify-content-end">
+                <a class="link-dark me-2 mt-md-0 mt-1 dark-white text-decoration-none" href="{{- data.get_url(lesson.url) }}">View all</a>
+            </div>
+            <hr class="mt-1 mb-0">
+        </div>
+    {% endfor %}
+
+</div>

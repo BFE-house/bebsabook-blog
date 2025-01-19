@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-end align-items-center">
+    <div class="d-flex align-items-center">
+
+        <div class="fb-share-button me-1" data-href="{{- data.tHelper.shareable_url(data.page)  }}"
+             data-layout="button_count" data-size="large">
+            <a target="_blank"
+               href="https://www.facebook.com/sharer/sharer.php?u={{- data.tHelper.shareable_url(data.page)  }}%2F&amp;src=sdkpreparse"
+               class="fb-xfbml-parse-ignore">
+                Share
+            </a>
+        </div>
+
+        <div class=" me-1 tweet-btn">
+            <a class="twitter-share-button" target="_blank"
+               href="https://twitter.com/intent/tweet?url={{- data.tHelper.shareable_url(data.page)  }}&text={{- data.title  }}"
+               data-size="large">
+            </a>
+        </div>
+        <div class="in-shear">
+            <script type="IN/Share" data-url="{{- data.tHelper.shareable_url(data.page)  }}"></script>
+        </div>
+    </div>
+</div>
+<script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v14.0&appId=193886847837547&autoLogAppEvents=1" nonce="NgRWwceA"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

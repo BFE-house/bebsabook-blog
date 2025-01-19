@@ -1,0 +1,25 @@
+{% extends "base/group-base.html" %}
+
+{% macro render_topic(topics, extra_class = '') %}
+    <ul class="out-line-list {{- extra_class }}">
+        {% for topic in topics %}
+            <li>
+                <span class="fa-solid fa-arrow-right-long me-2"></span>
+                <a href="/{{- topic.relativeUrl }}">{{- topic.navName }}</a>
+                {%- if topic.nested %}
+                    {{ render_topic(topic.nested, " mt-2") }}
+                {%- endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{%- endmacro %}
+
+{% block group_base_content %}
+    <div class="inner-content">
+        <h1 class="underlined-header text-h1">{{- data.page.navName }}</h1>
+        <hr>
+        {{ render_topic(data.page.nested) }}
+    </div>
+    {% include 'include/social-share.html' %}
+    {% include 'include/next-prev.html' %}
+{% endblock %}

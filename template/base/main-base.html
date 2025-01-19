@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{- data.tHelper.seo_tags(data.seo)  }}
+    {{- data.tHelper.sm_tags(data.page)  }}
+    <title>{% block title %}{{ data.title }}{% endblock %}{{- data.get_site_name() }}</title>
+    <link rel="icon" type="image/x-icon" href="{{- data.get_url('template-assets/img/favicon.ico')  }}">
+    <link rel="stylesheet" href="{{- data.get_url('template-assets/css/lib/bootstrap.min.css')  }}">
+    <link rel="stylesheet" href="{{- data.get_url('template-assets/css/template.css')  }}">
+    <link rel="stylesheet" href="{{- data.get_url('template-assets/css/custom-style.css')  }}">
+    <link rel="stylesheet" href="{{- data.get_url('template-assets/css/dark-style.css')  }}">
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <script>
+        document.body.className += " " + localStorage.getItem('mode');
+    </script>
+    {% block main_base_content %}{% endblock %}
+    <script src="{{- data.get_url('template-assets/js/lib/jquery.min.js')  }}"></script>
+    <script src="{{- data.get_url('template-assets/js/lib/bootstrap.bundle.min.js')  }}"></script>
+    <script src="{{- data.get_url('template-assets/js/lib/fontawesomel.min.js')  }}"></script>
+
+
+
+    <script src="{{- data.get_url('template-assets/js/pweb/pweb.js')  }}"></script>
+    <script src="{{- data.get_url('template-assets/js/pweb/pweb.ajax.js')  }}"></script>
+    <script src="{{- data.get_url('template-assets/js/pweb/pweb.view.mode.js')  }}"></script>
+    <script src="{{- data.get_url('template-assets/js/pweb/pweb.init.js')  }}"></script>
+
+
+    {% block maing_script_block %}{% endblock %}
+
+    {%- if data.mode == 'prod' %}
+        {% include 'include/google-include.html' %}
+    {%- endif %}
+
+
+</body>
+</html>

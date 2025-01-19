@@ -1,0 +1,7 @@
+{% extends "base/main-base.html" %}
+
+{% block main_base_content %}
+    {% include 'include/common-header.html' %}
+        {% block site_base_content %}{% endblock %}
+    {% include 'include/footer.html' %}
+{% endblock %}

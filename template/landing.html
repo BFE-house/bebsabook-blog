@@ -1,0 +1,40 @@
+{% extends "base/main-base.html" %}
+
+{% block main_base_content %}
+<main>
+    {% include 'include/landing-header.html' %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="intro">
+                    <div class="text-left logo-dark-white mb-4">
+                        <img src="{{- data.get_url('template-assets/img/logo-black.png') }}" alt="HMTMCSE Logo"
+                             class="img-fluid">
+                    </div>
+                    <div class="bar">
+                        <div class="gcse-search"></div>
+                        <span class="search-icon">
+                                <i class="fas fa-search"></i>
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid px-3 px-md-5 ">
+        <div class="row g-2 g-md-5">
+            <div class="col-md-8">
+                {% include 'include/landing/lesson.html' %}
+            </div>
+            <div class="col-md-4">
+                {% include 'include/landing/video.html' %}
+            </div>
+        </div>
+        {% include 'include/social-share.html' %}
+    </div>
+
+    <script async src="https://cse.google.com/cse.js?cx=011600571897857392745:9q_qj0kepdw"></script>
+    {% include 'include/footer.html' %}
+</main>
+{% endblock %}

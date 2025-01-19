@@ -1,0 +1,20 @@
+<nav aria-label="breadcrumb" class="p-2">
+    <ol class="breadcrumb py-2">
+        <li class="breadcrumb-item">
+            <a href="/">
+                <i class="fa-solid fa-house"></i>
+            </a>
+        </li>
+        {% for breadcrumb in data.breadcrumb %}
+            <li class="breadcrumb-item">
+                {%- if breadcrumb.isCurrentPage %}
+                    {{- breadcrumb.name }}
+                {%- else %}
+                    <a href="/{{- breadcrumb.url }}">
+                        {{- breadcrumb.name }}
+                    </a>
+                {%- endif %}
+            </li>
+        {% endfor %}
+    </ol>
+</nav>

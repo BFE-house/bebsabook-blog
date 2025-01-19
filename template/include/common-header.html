@@ -1,0 +1,103 @@
+<header class="navbar navbar-expand-lg navbar-dark bd-navbar sticky-top bg-pf-primary">
+
+
+    <nav class="container-fluid bd-gutter flex-wrap flex-lg-nowrap">
+
+        <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar">
+            <i class="fa-solid fa-bars"></i>
+            <span class="d-none fs-6 pe-1">Browse</span>
+        </button>
+
+        <a class="navbar-brand p-0 me-0 me-lg-2" href="{{ data.get_url() }}" aria-label="Bootstrap">
+            <img src="{{- data.get_url('template-assets/img/logo-white.png')  }}" height="25" width="80" alt="Logo">
+        </a>
+
+        <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar">
+            <i class="fa-solid fa-ellipsis"></i>
+        </button>
+
+        <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar"  data-bs-scroll="true">
+
+            <div class="offcanvas-header px-4 pb-0">
+                <h5 class="offcanvas-title text-white">Menu</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
+            </div>
+
+            <div class="offcanvas-body p-4 pt-0 p-lg-0">
+                <hr class="d-lg-none text-white-50">
+                {%- if data.headerGlobal and data.headerGlobal.topLeftNav %}
+                    {% set topLeftNav = data.headerGlobal.topLeftNav %}
+                    <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
+                        {% for nav in topLeftNav %}
+                            <li class="nav-item col-6 col-lg-auto {{- ' dropdown' if nav.nested }}">
+                                {%- if not nav.nested %}
+                                    <a class="nav-link py-2 px-0 px-lg-2" href="{{- data.get_url(nav.url) }}">
+                                        {{- nav.name }}
+                                    </a>
+                                {%- else %}
+                                    <a class="nav-link py-2 px-0 px-lg-2 dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                                        {{- nav.name }}
+                                    </a>
+                                    <ul class="dropdown-menu col-md-auto z-1100">
+                                        {% for sub_nav in nav.nested %}
+                                            <li>
+                                                <a class="dropdown-item" href="{{- data.get_url(sub_nav.url) }}">
+                                                    {{- sub_nav.name }}
+                                                </a>
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {%- endif %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {%- endif %}
+
+                <hr class="d-lg-none text-white-50">
+
+                {%- if data.headerGlobal and data.headerGlobal.socialMedia %}
+                    {% set socialMedia = data.headerGlobal.socialMedia %}
+                    <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a class="nav-link py-2 px-0 px-lg-2" href="{{- socialMedia.github }}" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <small class="d-lg-none ms-2">GitHub</small>
+                            </a>
+                        </li>
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a class="nav-link py-2 px-0 px-lg-2" href="{{- socialMedia.facebook }}" target="_blank">
+                                <i class="fab fa-facebook"></i>
+                                <small class="d-lg-none ms-2">Facebook</small>
+                            </a>
+                        </li>
+
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a class="nav-link py-2 px-0 px-lg-2" href="{{- socialMedia.youtube }}" target="_blank">
+                                <i class="fab fa-youtube"></i>
+                                <small class="d-lg-none ms-2">YouTube</small>
+                            </a>
+                        </li>
+
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a class="nav-link py-2 px-0 px-lg-2" href="{{- socialMedia.linkedin }}" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                                <small class="d-lg-none ms-2">LinkedIn</small>
+                            </a>
+                        </li>
+                    </ul>
+                {%- endif %}
+
+                <div class="mod-switcher">
+                    <div class="mode-icon" id="switch-mode-icon">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="switch-mode-checkbox">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</header>

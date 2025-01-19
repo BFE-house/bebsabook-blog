@@ -1,0 +1,65 @@
+<div class="container-fluid top">
+    <ul class="user-nav">
+
+        {%- if data.headerGlobal and data.headerGlobal.socialMedia %}
+            {% set socialMedia = data.headerGlobal.socialMedia %}
+
+            <li>
+                <a href="{{- socialMedia.github }}" target="_blank">
+                    <i class="fab fa-github-square"></i>
+                    GitHub
+                </a>
+            </li>
+            <li>
+                <a href="{{- socialMedia.facebook }}" target="_blank">
+                    <i class="fab fa-facebook-square"></i>
+                    Facebook
+                </a>
+            </li>
+
+
+            <li>
+                <a href="{{- socialMedia.youtube }}" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                    YouTube
+                </a>
+            </li>
+
+            <li>
+                <a href="{{- socialMedia.linkedin }}" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+            </li>
+        {%- endif %}
+
+
+        <li class="landing-dark-switcher">
+            <div class="mod-switcher">
+                <div class="mode-icon" id="switch-mode-icon">
+                    <i class="fa-solid fa-sun"></i>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="switch-mode-checkbox">
+                </div>
+            </div>
+        </li>
+
+        <li class="home-toggler d-none">
+            <div class="d-none">
+                <input class="form-check-input mode-toggler" type="checkbox" data-theme-control="theme"/>
+                <label class="mb-0 mode-toggler-icon " data-bs-toggle="tooltip" data-bs-placement="left"
+                       title="Switch to light theme">
+                    <span class="fas fa-sun fs-0"></span>
+                </label>
+            </div>
+            <div>
+                <input class="form-check-input mode-toggler" type="checkbox" data-theme-control="theme"/>
+                <label class="mb-0 mode-toggler-icon" data-bs-toggle="tooltip" data-bs-placement="left"
+                       title="Switch to dark theme">
+                    <span class="fas fa-moon fs-0"></span>
+                </label>
+            </div>
+        </li>
+    </ul>
+</div>

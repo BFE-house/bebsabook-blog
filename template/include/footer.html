@@ -1,0 +1,51 @@
+<footer class="mt-auto">
+    <div class="bd-footer bg-light">
+        <div class="container-fluid px-5 py-5 footer-top">
+            <div class="row">
+
+                {%- if data.footerGlobal and data.footerGlobal.about %}
+                    {% set about = data.footerGlobal.about %}
+                    <div class="col-lg-3 me-auto mb-3">
+                        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none logo-dark-white"
+                           href="{{- data.get_url() }}">
+                            <img src="{{- data.get_url(about.logo) }}" height="60px" width="200" alt="Logo">
+                        </a>
+                        <p>{{- about.info }}</p>
+                    </div>
+                {%- endif %}
+
+
+                {%- if data.footerGlobal and data.footerGlobal.navigation %}
+                    {% set navigation = data.footerGlobal.navigation %}
+                    {% for nav in navigation %}
+                        <div class="col-6 col-lg-2 mb-3">
+                            <h5>{{- nav.title }}</h5>
+                            <ul class="list-unstyled">
+                                {% for link in nav.links %}
+                                    <li class="mb-2">
+                                        {%- if link.exUrl %}
+                                            <a href="{{- link.exUrl }}" target="_blank">{{- link.name }}</a>
+                                        {%- else %}
+                                            <a href="{{- data.get_url(link.url) }}">{{- link.name }}</a>
+                                        {%- endif %}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    {% endfor %}
+                {%- endif %}
+            </div>
+
+            <a href="https://www.buymeacoffee.com/hmtmcse" class="text-center" target="_blank">
+                <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" >
+            </a>
+
+        </div>
+
+        <div class="container-fluid">
+            <div class="copyright"> © Copyright 2014-{{ show_year }}, <strong><span>HMTMCSE Foundation</span></strong>.
+                All Rights Reserved,
+                <span >Developed by <strong><a class="text-success" target="_blank" href="https://www.banglafighter.com/">Bangla Fighter.</a></strong></span>
+            </div>
+    </div>
+</footer>

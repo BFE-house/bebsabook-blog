@@ -1,0 +1,12 @@
+groupName: Root
+defaultLayout: system/default-base
+pages:
+- navName: Bismillah
+  url: bismillah
+  path: /
+  relativeUrl: bismillah
+  type: Page
+  title: Bismillah
+  layout: landing
+  endTree: true
+  pageData: A918E47B-140D-11ED-918B-005056C00008

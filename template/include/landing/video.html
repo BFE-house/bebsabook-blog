@@ -1,0 +1,27 @@
+
+
+<h2 class="mb-0 text-h2">{{- data.pageData.video.title }}</h2>
+<hr class="mb-3"/>
+<div class="row gy-2">
+
+{% for topic in data.pageData.video.topics %}
+    <div class="col-md-12">
+        <a href="#" class="card shadow-sm poly-card">
+            <div class="d-flex align-items-center">
+                <div class="px-1">
+                    <img src="{{ topic.photo if topic.photo else '/template-assets/img/video-default.png' }}" alt="{{- topic.name }}" class="img-fluid youtube-logo">
+                </div>
+                <div class=" flex-grow-1 px-1  px-lg-3">
+                    <h3 class="mb-0 medium-head">
+                        {{- topic.name }}
+                    </h3>
+                </div>
+            </div>
+        </a>
+    </div>
+{% endfor %}
+
+    <div class="d-flex  justify-content-end">
+        <a class="link-dark me-2 dark-white" href="{{- data.pageData.video.url }}">View all video</a>
+    </div>
+</div>
