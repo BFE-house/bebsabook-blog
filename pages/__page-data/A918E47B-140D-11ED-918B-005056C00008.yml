@@ -1,14 +1,12 @@
 relativeUrl: bismillah
 lesson:
-  - name: In House Development
-    url: pweb
+  - name: Shopify
+    url: shopify
     topics:
-      - name: PWeb
-        url: 'pweb'
+      - name: App Development
+        url: 'app-development'
         photo: /template-assets/img/default-image.png
-      - name: SohozWeb
-        url: 'sohoz-web'
-        photo: /template-assets/img/default-image.png
+
 video:
   title: Video Tutorial
   url: '#'

@@ -789,8 +789,9 @@ h3.medium-head {
 }
 
 .text-h2 {
+    font-weight: bold;
     font-size: 1.5rem;
-    color:#ba3925;
+    color:#1e2355;
 }
 
 
@@ -1144,7 +1145,7 @@ h3.medium-head {
 }
 
 .text-h2 a:hover{
-    color: #9a3020;
+    color: #1e2355;
 }
 
 .small-card-img{
