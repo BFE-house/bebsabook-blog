@@ -278,9 +278,12 @@ body.dark {
     color: #1a1e21;
 }
 
-.dark .logo-dark-white img {
-    -webkit-filter: invert(100%); /* Safari/Chrome */
-    filter: invert(100%);
+.dark .logo-dark-white img{
+    filter: drop-shadow(2px 0px 2px #8cd0e5);
+}
+
+.dark .link-transparent:hover{
+    color: #8cd0e5;
 }
 
 .dark .dark-white {
@@ -342,4 +345,26 @@ body.dark {
 .dark .gsc-completion-selected {
     background-color: #1a1e21;
     cursor: pointer;
+}
+
+.dark .breadcrumb-item a {
+    color: #8cd0e5;
+}
+
+.dark .page-content h1,.dark  .page-content h2,.dark  .page-content h3,.dark
+#toctitle,.dark  .sidebarblock > .content > .title,.dark  .page-content h4,
+.dark  .page-content h5,.dark  .page-content h6 {
+    color: #8cd0e5;
+}
+
+.dark .pf-text-primary {
+    color: #86cfe5;
+}
+
+.dark .text-h1 {
+    color: #86cfe5;
+}
+
+.dark .out-line-list a {
+    color: #86cfe5;
 }

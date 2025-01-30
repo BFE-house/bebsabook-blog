@@ -298,9 +298,9 @@
 
 .page-content h1,.page-content h2,.page-content h3, #toctitle, .sidebarblock > .content > .title,.page-content h4,.page-content h5,.page-content h6 {
     font-family: "Open Sans", "DejaVu Sans", sans-serif;
-    font-weight: 300;
+    font-weight: 600;
     font-style: normal;
-    color: #ba3925;
+    color: #272c6b;
     text-rendering: optimizeLegibility;
     margin-top: 0.2em;
     margin-bottom: .5em;

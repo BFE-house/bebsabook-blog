@@ -4,7 +4,7 @@ body{
     min-height: 100vh;
 }
 .bg-pf-primary {
-    background-color: #0e504d;
+    background-color: #272c6b;
 }
 
 .bg-pf-dark {
@@ -14,14 +14,18 @@ body{
 .pf-btn-primary {
     font-weight: 600;
     color: #fff;
-    background-color: #0e504d;
-    border-color: #0e504d;
+    background-color: #272c6b;
+    border-color: #272c6b;
 }
 
 .pf-btn-primary:hover, .pf-btn-primary:active, .pf-btn-primary:focus  {
     color: #fff;
-    background-color: #086662;
-    border-color: #086662;
+    background-color: #1e2355;
+    border-color: #1e2355;
+}
+
+.bd-navbar .navbar-brand  img{
+    filter: drop-shadow(1px 1px 1px #539592);
 }
 
 
@@ -541,7 +545,7 @@ body{
     margin: 0 auto;
     width: 580px;
     border-radius: 30px;
-    border: 1px solid #dfe1e5;
+    border: 1px solid #dfe1e594;
     overflow: hidden;
 }
 
@@ -780,18 +784,18 @@ h3.medium-head {
 
 .card-sm-title {
     font-size: 22px;
-    color: #ba3925;
+    color: #272c6b;
 }
 
 .text-h1 {
     font-size: 2.25rem;
-    color:#ba3925;
+    color:#272c6b;
 }
 
 .text-h2 {
     font-weight: bold;
     font-size: 1.5rem;
-    color:#1e2355;
+    color:#272c6b;
 }
 
 
@@ -804,7 +808,7 @@ h3.medium-head {
 }
 
 .search-title {
-    color: #0000CC;
+    color: #272c6b;
 }
 
 .my-acc .dropdown-menu[data-bs-popper] {
@@ -976,6 +980,7 @@ h3.medium-head {
 
 
 
+
 .max-w-priview{
     max-width: 300px;
 }
@@ -999,7 +1004,7 @@ h3.medium-head {
     text-decoration: none;
     font-weight: 700;
     font-size: 17px;
-    color: #139ac4;
+    color: #272c6b;
 }
 
 .out-line-list a:hover{
@@ -1015,7 +1020,7 @@ h3.medium-head {
     height: 1px;
     width: 100px;
     position: absolute;
-    background-color: #ba3925;
+    background-color: #272c6b;
     bottom: -17px;
     left: 0;
 }
@@ -1029,12 +1034,12 @@ h3.medium-head {
 
 .breadcrumb-item a{
     text-decoration: none;
-    color: #139ac4;
+    color: #272c6b;
     font-weight: 500;
 }
 
 .breadcrumb-item a:hover{
-    color: #139ac4;
+    color: #32377c;
 }
 
 .mod-switcher{
@@ -1042,7 +1047,7 @@ h3.medium-head {
     width: auto;
     align-items: center;
     padding: 2px 8px;
-    border: 1px solid #539592;
+    border: 1px solid #86cfe563;
     border-radius: 5px;
     margin-left: 8px;
     max-width: 80px;
@@ -1062,8 +1067,8 @@ h3.medium-head {
 }
 
 .mod-switcher .form-check-input:checked{
-    background-color: #0e504d;
-    border-color: #2d918c;
+    background-color: #1a1e21;
+    border-color: #86CFE5FF;
     box-shadow: none !important;
 }
 .mod-switcher .form-switch .form-check-input:focus {
@@ -1082,7 +1087,7 @@ h3.medium-head {
 
 .landing-dark-switcher .mod-switcher .form-check-input:checked{
     background-color: transparent;
-    border-color: #2d918c;
+    border-color: #86CFE5FF;
     box-shadow: none !important;
 }
 
@@ -1200,7 +1205,7 @@ h3.medium-head {
 .bd-footer .copyright {
     text-align: center;
     padding: 30px 0;
-    color: #012970;
+    color: #272c6b;
 }
 .dark .bd-footer .copyright {
     color: #fff;
