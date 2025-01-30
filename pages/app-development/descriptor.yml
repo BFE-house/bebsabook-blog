@@ -1,0 +1,12 @@
+groupName: App Development
+defaultLayout: tutorial
+baseUrl: app-development
+pages:
+- navName: Bismillah
+  url: bismillah
+  path: app-development
+  relativeUrl: app-development/bismillah
+  type: Page
+  title: Shopify App Intro
+  layout: tutorial
+  endTree: true

@@ -1,0 +1,32 @@
+= How to start Shopify App Development?
+
+For shopify app development need to know the ecosystem of the shopify. Let's familiarize with Shopify's key components.
+
+* *Shopify Admin API :* Allows you to interact with store data.
+* *Shopify Storefront API :* Helps fetch product, collection, and customer data for custom frontends.
+* *Shopify App Bridge :* A set of tools for embedding apps within Shopify Admin.
+* *Shopify Functions :* For extending Shopify’s backend logic.
+* *Shopify Polaris :* A React-based UI framework for building Shopify admin interfaces.
+
+{blank} +
+
+== Understand Shopify App Types
+* *Public App :* Listed on the Shopify App Store, available for multiple merchants.
+* *Custom App :* Built for a specific Shopify store.
+* *Embedded App :* Runs within the Shopify Admin using Shopify App Bridge.
+
+{blank} +
+
+== Steps for Shopify App Development
+* *Shopify Partner Account :* Sign up at link:https://www.shopify.com/partners[Shopify Partners, window=_blank].
+* *Development Store :* Create a test store to build and test the app.
+* *Basic Knowledge :*
+** Web development (HTML, CSS, JavaScript).
+** Backend development (Node.js, Ruby, Python, PHP, Java, etc.).
+** Familiarity with REST APIs and GraphQL.
+** Understanding of OAuth 2.0 for authentication.
+* *Setup Development Environment*
+* *Build the App*
+* *Testing and Debugging the App*
+* *Deploy the App*
+* *Submit the App to the Shopify App Store*

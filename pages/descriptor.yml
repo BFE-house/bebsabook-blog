@@ -10,3 +10,11 @@ pages:
   layout: landing
   pageData: A918E47B-140D-11ED-918B-005056C00008
   endTree: true
+- navName: App Development
+  url: app-development
+  path: /
+  relativeUrl: app-development
+  type: Group
+  groupDefaultLayout: tutorial
+  title: App development
+  layout: group-list
