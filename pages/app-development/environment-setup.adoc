@@ -1,0 +1,13 @@
+= Environment Setup for Shopify App Development
+
+Before you start coding, you need to set up your development environment. Here's a step-by-step guide to get you started
+with Shopify App Development.
+
+{blank} +
+
+== Prerequisites
+* *Node.js (LTS version) & npm/yarn :* Download from link:https://nodejs.org/en[Node.js official website, window=_blank]
+* *Git :* Install from link:https://git-scm.com/[Git official site, window=_blank]
+* *Shopify Partner Account :* Sign up at link:https://www.shopify.com/partners[Shopify Partners, window=_blank]
+* *Shopify Development Store :* Create a new store in your Partner Dashboard (for testing).
+* *ngrok (for Webhooks & Local Development) :* Download & install from link:https://ngrok.com/[ngrok website, window=_blank]

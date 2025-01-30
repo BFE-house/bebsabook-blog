@@ -10,3 +10,19 @@ pages:
   title: Shopify App Intro
   layout: tutorial
   endTree: true
+- navName: Environment Setup
+  url: environment-setup
+  path: app-development
+  relativeUrl: app-development/environment-setup
+  type: Page
+  title: Environment Setup
+  layout: tutorial
+  endTree: true
+- navName: Shopify Partner
+  url: shopify-partner
+  path: app-development
+  relativeUrl: app-development/shopify-partner
+  type: Page
+  title: Shopify partner
+  layout: tutorial
+  endTree: true
